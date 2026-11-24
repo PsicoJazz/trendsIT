@@ -1,0 +1,652 @@
+
+/* =====================================
+   1. PALETA DE CORES
+===================================== */
+
+:root {
+    --azul-profundo: #101828;
+    --azul-secundario: #1D3557;
+    --ciano: #00C2D1;
+    --branco: #F8FAFC;
+    --cinza: #94A3B8;
+
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto: 'Roboto', sans-serif;
+}
+
+/* =====================================
+   2. RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 12px;
+
+    background: linear-gradient(
+        135deg,
+        var(--azul-profundo),
+        var(--azul-secundario)
+    );
+
+    color: var(--branco);
+    font-family: var(--fonte-texto);
+}
+
+/* =====================================
+   3. CONTAINER PRINCIPAL
+===================================== */
+
+.perfil {
+    width: 100%;
+    max-width: 420px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 25px 22px;
+
+    background: rgba(255,255,255,0.07);
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 22px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+
+    backdrop-filter: blur(12px);
+}
+
+/* =====================================
+   4. PERFIL
+===================================== */
+
+.cabecalho {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    gap: 6px;
+}
+
+.foto-redonda {
+    width: 115px;
+    height: 115px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 3px solid var(--ciano);
+
+    box-shadow: 0 5px 20px rgba(0,194,209,0.25);
+
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 27px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ciano);
+}
+
+.descricao {
+    max-width: 340px;
+
+    font-family: var(--fonte-texto);
+    font-size: 13px;
+
+    line-height: 1.6;
+    color: var(--cinza);
+
+    margin-top: 5px;
+}
+
+/* =====================================
+   5. BOTÕES
+===================================== */
+
+.botoes {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.botao {
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 0 15px;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+    color: #FFFFFF;
+
+    font-family: var(--fonte-titulo);
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.botao i {
+    width: 22px;
+    text-align: center;
+    font-size: 19px;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.12);
+}
+
+/* Cores das redes */
+
+.instagram {
+    background: linear-gradient(
+        45deg,
+        #f09433,
+        #dc2743,
+        #bc1888
+    );
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.tiktok {
+    background: #111111;
+}
+
+.youtube {
+    background: #FF0000;
+}
+
+/* =====================================
+   6. RODAPÉ
+===================================== */
+
+.rodape {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    text-align: center;
+}
+
+.rodape p {
+    font-family: var(--fonte-titulo);
+    font-size: 12px;
+    color: var(--cinza);
+}
+
+.icones-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.icones-sociais a {
+    color: var(--branco);
+    font-size: 21px;
+    transition: 0.3s;
+}
+
+.icones-sociais a:hover {
+    color: var(--ciano);
+    transform: scale(1.2);
+}
+
+.rodape small {
+    font-size: 10px;
+    color: var(--cinza);
+}
+
+/* =====================================
+   7. TABLETS E CELULARES
+===================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    .perfil {
+        max-width: 420px;
+        padding: 22px 18px;
+        gap: 14px;
+    }
+
+    .foto-redonda {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .botao {
+        height: 46px;
+        min-height: 46px;
+    }
+}
+
+/* =====================================
+   8. CELULARES PEQUENOS
+===================================== */
+
+@media (max-width: 360px) {
+
+    .perfil {
+        padding: 16px 12px;
+        gap: 12px;
+    }
+
+    .foto-redonda {
+        width: 85px;
+        height: 85px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    .descricao {
+        font-size: 12px;
+    }
+
+    .botao {
+        height: 44px;
+        min-height: 44px;
+        font-size: 13px;
+    }
+
+    .icones-sociais {
+        gap: 18px;
+    }
+}
+
+
+/* ==========================================
+   ANIMAÇÕES - BIOLINK PRO
+========================================== */
+
+/* 1. Entrada suave do perfil */
+@keyframes entradaPerfil {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.perfil {
+    animation: entradaPerfil 1s ease-out both;
+}
+
+
+/* 2. Animação flutuante da imagem */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.foto-redonda {
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+
+/* 3. Entrada suave dos textos */
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cabecalho h1 {
+    animation: aparecerTexto 1s ease 0.2s both;
+}
+
+.cabecalho h2 {
+    animation: aparecerTexto 1s ease 0.4s both;
+}
+
+.cabecalho .descricao {
+    animation: aparecerTexto 1s ease 0.6s both;
+}
+
+
+/* 4. Entrada dos botões */
+@keyframes aparecerBotoes {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.botoes .botao {
+    animation: aparecerBotoes 0.7s ease both;
+}
+
+.botoes .botao:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.botoes .botao:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.botoes .botao:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.botoes .botao:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.botoes .botao:nth-child(5) {
+    animation-delay: 1s;
+}
+
+
+/* 5. Efeito nos botões ao passar o mouse */
+.botao {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+.botao:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.20);
+
+    filter: brightness(1.12);
+}
+
+
+/* 6. Efeito de brilho nos botões */
+.botao::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+
+    transition: left 0.6s ease;
+
+    pointer-events: none;
+}
+
+.botao:hover::before {
+    left: 140%;
+}
+
+
+/* 7. Animação dos ícones sociais */
+.icones-sociais a {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.icones-sociais a:hover {
+    transform: translateY(-6px) rotate(8deg);
+}
+
+
+/* 8. Animação do rodapé */
+@keyframes aparecerRodape {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.rodape {
+    animation: aparecerRodape 1.2s ease 1s both;
+}
+
+
+/* 9. Acessibilidade: reduzir movimentos */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+/* ==========================================
+   CARTÃO DE CONTATO DIGITAL
+========================================== */
+
+.cartao-contato {
+    width: 100%;
+    max-width: 420px;
+
+    margin: 25px auto;
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f0f5ff
+    );
+
+    border: 1px solid #dce5f5;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    animation: entradaPerfil 1s ease-out both;
+}
+
+/* Ícone do cartão */
+
+.contato-avatar {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #003366;
+    color: #ffffff;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+}
+
+/* Título */
+
+.cartao-contato h2 {
+    color: #003366;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+/* Descrição */
+
+.cartao-contato p {
+    color: #333333;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+/* Botão de salvar contato */
+
+.botao-contato {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+    min-height: 50px;
+
+    padding: 14px 20px;
+
+    background: #003366;
+    color: #ffffff;
+
+    border-radius: 12px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover */
+
+.botao-contato:hover {
+    background: #00509d;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 18px rgba(0, 51, 102, 0.25);
+}
+
+/* Foco acessível */
+
+.botao-contato:focus-visible {
+    outline: 4px solid #ff9900;
+    outline-offset: 4px;
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+
+    .cartao-contato {
+        padding: 22px 16px;
+    }
+
+    .botao-contato {
+        min-height: 50px;
+    }
+
+}
